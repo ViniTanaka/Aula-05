@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Criar Fucnionario</title>
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- Barra superior com os menus de navegação -->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">Cadastro</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="index.html">Funcionários</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Container Principal -->
+        <div id="main" class="container">
+            <h3 class="page-header">Incluir Funcionário</h3>
+            <!-- Formulario para inclusao de funcionários -->
+            <form action="ManterFuncionario.do" method="post">
+                <!-- area de campos do form -->
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <label for="empresa">Empresa</label>
+                        <input type="text" class="form-control" name="empresa" id="empresa" required maxlength="100" placeholder="Razão Social">
+                    </div>
+                </div>
+               <div class="row">
+                    <div class="form-group col-md-4">
+                        <label for="nome">Nome</label>
+                        <input type="text" class="form-control" name="nome" id="nome" required maxlength="100" placeholder="nome completo">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="cpf">CPF</label>
+                        <input type="text" class="form-control" name="cpf" id="cpf" required maxlength="100" placeholder="cpf">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="nascimento">Nascimento</label>
+                        <input type="text" class="form-control" name="nascimento" id="nome" required maxlength="100" placeholder="nascimento">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="horarioEntrada">Horário de entrada</label>
+                        <input type="text" class="form-control" name="horarioEntrada" id="horarioEntrada" maxlength="15" placeholder="horário de entrada na empresa">
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="horarioSaida">Horário de saída</label>
+                        <input type="text" class="form-control" name="horarioSaida" id="horarioSaida" required maxlength="15" placeholder="horário de saída da empresa">
+                    </div>
+                </div> 
+                <hr /> 
+                <div id="actions" class="row">
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary" name="acao" value="Criar">Salvar</button>
+                        <a href="index.html" class="btn btn-default">Cancelar</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+
+</html>
